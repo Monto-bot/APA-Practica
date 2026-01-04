@@ -1,0 +1,50 @@
+column_name,Description,Target,Feature
+kepid,Id Ibjeto,No,No
+kepoi_name,Id del objeto de interés,No,No
+kepler_name,Nombre exoPlaneta,No,No
+koi_disposition,Es Exoplaneta?,Yes,No
+koi_pdisposition,Es Exoplaneta?,No,No
+koi_score,"Output de clasificador lineal, confianza de exoplaneta",No,No
+koi_fpflag_nt,Indica si la curva de luz es consistene con un exoplaneta,No,No
+koi_fpflag_ss,Flag sistema binario eclipsante,No,No
+koi_fpflag_co,Indica si el origen del señal es de otro sistema cercano,No,No
+koi_fpflag_ec,Detecta contaminacion por coincidencia  cruzada,No,No
+koi_period,periodo orbital en dias,No,Yes
+koi_period_err1,Incertidumbre positiva del periodo,No,Yes
+koi_period_err2,Incertidumbre negativa periodo orbital,No ,Yes
+koi_time0bk,Tiempo absoluto en el que se produjo el tránsito,No,No
+koi_time0bk_err1,Incertidumbre positiva,No,No
+koi_time0bk_err2,Incertidumbre negativa,No,No
+koi_impact,Distancia normalizada entre la proyeccion del planeta sobre el disco estelar,No,Yes
+koi_impact_err1,Incertidumbre positiva,No,Yes
+koi_impact_err2,Incertidumbre negativa,No ,Yes
+koi_duration,Duracion del transito en horas,No ,Yes
+koi_duration_err1,Incertidumbre positiva,No,Yes
+koi_duration_err2,Incertidumbre negativa,No ,Yes
+koi_depth,Diferencia de brillo entre fuera del transito y dentro del tránsito,No,Yes
+koi_depth_err1,Incertidumbre positiva,No,Yes
+koi_depth_err2,Indertidumbre negativa,No,Yes
+koi_prad,Radio planetario en radios terrestres,No,Yes
+koi_prad_err1,Incertidumbre positiva,No,Yes
+koi_prad_err2,Incertidumbre negativa,No,Yes
+koi_teq,Temperatura de equilibrio del planeta en kelvin,No,Yes
+koi_teq_err1,Incertidumbre positiva,No,Yes
+koi_teq_err2,Incertidumbre negativa,No,Yes
+koi_insol,"Radiancia W/m^2 recibida en la alta atmosfera, normalizada a la terrestre",No,Yes
+koi_insol_err1,Incertidumbre positiva,No,Yes
+koi_insol_err2,Incertidumbre negativa,No,Yes
+koi_model_snr,Signal to noise ratio del modelo de transito,No,Yes
+koi_tce_plnt_num,Otro Id,No,No
+koi_tce_delivname,Otro Id,No,No
+koi_steff,Temperatura efectiva estelar en kelvin (Temperatura cuerpo negro),No,Yes
+koi_steff_err1,Incertidumbre positiva,No,Yes
+koi_steff_err2,Incertidumbre negativa,No,Yes
+koi_slogg,"Gravedad superficial estelar, en escala logaritmica",No ,Yes
+koi_slogg_err1,Incertidumbre negativa,No,Yes
+koi_slogg_err2,Incertidumbre negativa,No,Yes
+koi_srad,Radio estelar en radios solares,No,Yes
+koi_srad_err1,Incertidumbre positiva,No,Yes
+koi_srad_err2,Incertidumbre negativa,No ,Yes
+ra,Ascension recta en grados,No,Yes
+dec,Declinacion en grados,No,Yes
+koi_kepmag,Magntiud Kepler,No ,Yes
