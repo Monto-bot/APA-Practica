@@ -1,11 +1,8 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.impute import SimpleImputer
-from sklearn.decomposition import PCA
+
 
 ## Log: Transform amb MinMax, Transformacions logarítmiques. El tractament d'outliers es fa amb clipping.
 # La imputació de valors faltants es fa amb la mediana de cada columna.
@@ -38,6 +35,7 @@ class Preprocessing:
         "koi_model_snr"
     ]
 
+
     def __init__(self):
         self.normalizer : None | MinMaxScaler = None
         self.imputer : None | SimpleImputer = None
@@ -46,7 +44,9 @@ class Preprocessing:
         assert self.normalizer is not None, "Normalizer has not been fitted. Call fit_transform first."
         assert self.imputer is not None, "Imputer has not been fitted. Call fit_transform first."
 
-        X_imputed = pd.DataFrame(self.imputer.transform(X), columns=X.columns)
+        X = X.copy()
+        X.drop(columns= ['koi_teq_err1', 'koi_teq_err2'], inplace=True)
+        X_imputed = pd.DataFrame(self.imputer.transform(X), columns=X.columns) # type: ignore
         X_rescaled = self.rescalaIpositivitza(X_imputed)
         
         X_normalized = pd.DataFrame(self.normalizer.transform(X_rescaled), columns=X.columns)
@@ -55,6 +55,8 @@ class Preprocessing:
     def fit_transform(self, normalizer: MinMaxScaler, imputer: SimpleImputer, X_train: pd.DataFrame) -> pd.DataFrame:
         self.normalizer = normalizer
         self.imputer = imputer
+        X_train = X_train.copy()
+        X_train.drop(columns= ['koi_teq_err1', 'koi_teq_err2'], inplace=True)
         X_train_imputed = pd.DataFrame(self.imputer.fit_transform(X_train), columns=X_train.columns)
         X_train_rescaled = self.rescalaIpositivitza(X_train_imputed)
         X_train_normalized = pd.DataFrame(self.normalizer.fit_transform(X_train_rescaled), columns=X_train.columns)
