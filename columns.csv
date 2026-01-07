@@ -3,7 +3,7 @@ kepid,Id Ibjeto,No,No
 kepoi_name,Id del objeto de interés,No,No
 kepler_name,Nombre exoPlaneta,No,No
 koi_disposition,Es Exoplaneta?,Yes,No
-koi_pdisposition,Es Exoplaneta?,Yes,No
+koi_pdisposition,Es Exoplaneta?,No,No
 koi_score,"Output de clasificador lineal, confianza de exoplaneta",No,No
 koi_fpflag_nt,Indica si la curva de luz es consistene con un exoplaneta,No,No
 koi_fpflag_ss,Flag sistema binario eclipsante,No,No
