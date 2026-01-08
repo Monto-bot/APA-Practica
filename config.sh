@@ -20,17 +20,3 @@ else
 fi
 
 echo "Virtual environment activated"
-# Read user input
-read -p "Enter command (update/exit): " command
-
-if [ "$command" = "update" ]; then
-    echo "Updating requirements..."
-    pip install -r requirements.txt
-elif [ "$command" = "exit" ]; then
-    echo "Exiting..."
-    exit 0
-else
-    echo "Unknown command: $command"
-fi
-# Keep the shell interactive after script execution
-exec bash
